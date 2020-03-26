@@ -16,22 +16,27 @@
             </p>
            
             <button class="play-button">Play Now!</button>
+        </div>
 
         
-        <div id="score"></div>
-        <div class="question-container">
-            <div class="question-number"></div>
-            <div class="question"></div>
-            <p id="question-list">Name the Cocktail!</p>
-            <img src="" class="cocktail-pic" alt="">
-            <div class="ingredients"></div>
+            <div id="score"></div>
+           <div class="quiz-flex">
+            <div class="question-container front-page hidden">
+                 <h1 id="question-list">Name the Cocktail!</h1>
+                <div class="question-number"></div>
+                <div class="question"></div>
+                
+                <img src="" class="cocktail-pic" alt="">
+                <div class="ingredients"></div>
             </div>
-            <form id="form">
+            
+            <form id="form" class="hidden">
                 <input type="submit" value="submit"/>
                 <input type="text" placeholder="Cocktail Name"/>
             </form>
             <div class="answer"></div>
-        </div>
+            <button class="next hidden">Next</button>
+           </div>
         
             
             

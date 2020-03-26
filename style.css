@@ -1,23 +1,21 @@
 * {
-    box-sizing: border-box;
-    
+  box-sizing: border-box;
 }
 
 .flex-box {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    padding: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
 }
 
 .front-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 60vw;
-    border: 5px solid gray;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60vw;
+  border: 5px solid gray;
 }
 
 .play-button {
@@ -29,14 +27,24 @@
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
+.hidden {
+  display: none;
+}
 
+.ingredients {
+  text-align: center;
+}
 
+.quiz-flex {
+  display: flex;
+  flex-direction: column;
+}
