@@ -9,19 +9,30 @@
 <body>
     <div class="flex-box">
         <div class="front-page">
-            <img src="drinkimg/bartenderlogo.jpeg" alt="bartender logo"/>
+            <img src="drinkimg/craftybartender.jpeg" alt="bartender logo"/>
             <h1>Bartender's Cocktail Trivia</h1>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. A ipsum omnis similique debitis natus ab eius aliquid rem consequatur autem? Esse expedita accusantium doloremque rem sit adipisci numquam, minima illo!
+                Test your cocktail knowledge and see if you can identify trendy drinks from around the world! 
             </p>
            
             <button class="play-button">Play Now!</button>
         </div>
 
         
-            <div id="score"></div>
-           <div class="quiz-flex">
-            <div class="question-container front-page hidden">
+            
+           <div class="quiz-flex hidden">
+            
+            <div class="question-container front-page">
+                <div id="scoring">
+                    <div id="score-items">
+                        <p class="score-word">
+                            Score
+                        </p>
+                        <h2 class="score-number">
+                            0
+                        </h2>
+                    </div>
+                </div>
                  <h1 id="question-list">Name the Cocktail!</h1>
                 <div class="question-number"></div>
                 <div class="question"></div>
@@ -30,12 +41,13 @@
                 <div class="ingredients"></div>
             </div>
             
-            <form id="form" class="hidden">
+            <form id="form">
                 <input type="submit" value="submit"/>
-                <input type="text" placeholder="Cocktail Name"/>
+                <input type="text" class="user" placeholder="Cocktail Name"/>
             </form>
             <div class="answer"></div>
-            <button class="next hidden">Next</button>
+            <button disabled="true" class="next hidden">Next</button>
+            <button class="reset">Reset</button>
            </div>
         
             

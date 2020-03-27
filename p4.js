@@ -24,7 +24,7 @@ let drinks = [
       "2 ounces of cranberry juice",
       "Squeeze 2 lime wedges"
     ],
-    "name-of-drink": "cosmopolitan"
+    "name-of-drink": "Cosmopolitan"
   },
   {
     "drink-url": "drinkimg/images.jpeg",
@@ -33,7 +33,7 @@ let drinks = [
       "2 ounces of homemade sour mix",
       "Garnish with cherry"
     ],
-    "name-of-drink": "whiskey sour"
+    "name-of-drink": "Whiskey Sour"
   },
   {
     "drink-url": "drinkimg/margarita.jpeg",
@@ -109,8 +109,6 @@ let drinks = [
   }
 ];
 
-let score = 0;
-
 // for (let i = 0; i < drinks.length; i++) this for loop is for the drinks variable for the object within
 
 // drinks.forEach(drinksContent)
@@ -128,6 +126,10 @@ let drinkPics = document.querySelector(".cocktail-pic");
 let submitButton = document.querySelector("#form");
 let frontPage = document.querySelector(".front-page");
 let container = document.querySelector(".question-container");
+let score = 0;
+let scoreCounter = document.querySelector(".score-number");
+let user = document.querySelector(".user");
+let quiz = document.querySelector(".quiz-flex");
 
 let roundCount = 0;
 let nextButton = document.querySelector(".next");
@@ -135,10 +137,12 @@ function newQuestion() {
   roundCount += 1;
   drinks[roundCount]["drink-url"];
   drinkPics.setAttribute("src", drinks[roundCount]["drink-url"]);
-  ingredients.empty();
+  ingredients.innerHTML = "";
   drinks[roundCount]["contents"].forEach(drinkContent => {
     ingredients.innerHTML += `<p> ${drinkContent} </p>`;
   });
+  nextButton.setAttribute("disabled", "");
+  user.value = "";
 }
 nextButton.addEventListener("click", newQuestion);
 
@@ -151,16 +155,39 @@ function play(e) {
     ingredients.innerHTML += `<p> ${drinkContent} </p>`;
   });
   frontPage.classList.toggle("hidden");
-  submitButton.classList.toggle("hidden");
-  container.classList.toggle("hidden");
+  //   submitButton.classList.toggle("hidden");
+  //   container.classList.toggle("hidden");
   nextButton.classList.toggle("hidden");
+  quiz.classList.toggle("hidden");
 }
 
 function handleSubmit(e) {
   e.preventDefault();
+  console.dir(scoreCounter);
+  drinks[roundCount]["name-of-drink"];
+  console.log(drinks[roundCount]["name-of-drink"]);
+  if (
+    document.querySelector(".user").value ===
+    drinks[roundCount]["name-of-drink"]
+  ) {
+    score++;
+    scoreCounter.innerText++;
+    pass = 1;
+    nextButton.removeAttribute("disabled");
+  } else {
+    alert("wrong answer");
+    nextButton.removeAttribute("disabled");
+  }
 }
 
 let playButton = document.querySelector(".play-button");
 playButton.addEventListener("click", play);
 
 submitButton.addEventListener("submit", handleSubmit);
+
+function resetGame(e) {
+  e.preventDefault();
+}
+
+let resetButton = document.querySelector(".reset");
+resetButton.addEventListener("click", resetGame);

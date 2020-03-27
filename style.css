@@ -2,20 +2,25 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+}
+
 .flex-box {
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   padding: 100px;
+  color: white;
 }
 
 .front-page {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 60vw;
   border: 5px solid gray;
+  width: 500px;
 }
 
 .play-button {
@@ -30,10 +35,12 @@ h1 {
   text-align: center;
 }
 
-.img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hidden {
@@ -44,7 +51,36 @@ h1 {
   text-align: center;
 }
 
-.quiz-flex {
+/* .quiz-flex {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+} */
+
+.next {
+  display: block;
+  margin: 10px auto;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  width: 25%;
+}
+
+#form {
+  text-align: center;
+  padding-top: 10px;
+}
+
+p {
+  text-align: center;
+}
+.reset {
+  display: block;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  width: 25%;
+}
+
+.score-number {
+  text-align: center;
 }
