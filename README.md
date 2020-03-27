@@ -8,4 +8,7 @@ If the user get the answer wrong then an alert will show up and notify the user 
 There is a score represented above the questions and it will reflect if the user got the question correct
 
 Future Development:
-Make reset button work
+Make reset button clickable whenever the user clicks on it at any point in the game.
+Make the image randomize whenever user reset the game
+Add cocktail history questions (multiple choice)
+Make an "end page" to display scores
